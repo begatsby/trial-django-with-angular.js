@@ -11,7 +11,8 @@
       'thinkster.authentication',
       'thinkster.layout',
       'thinkster.posts',
-      'thinkster.utils'
+      'thinkster.utils',
+      'thinkster.profiles'
     ]);
   angular
     .module('thinkster.config',[]);
