@@ -61,13 +61,30 @@ WSGI_APPLICATION = 'thinkster_django_angular_boilerplate.wsgi.application'
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
 import dj_database_url
-
+"""
 DATABASES = {
     'default': dj_database_url.config(
         default='sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
     )
 }
+"""
+DATABASES = {
+    'default': dj_database_url.config(
+        default='postgres://postgres:612115303@localhost:5432/reknit_test')
+}
 
+"""
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'reknit_test',
+        'USER': 'postgres',
+        'PASSWORD': '612115303',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+"""
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
