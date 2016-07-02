@@ -1,9 +1,7 @@
 """
 Django settings for thinkster_django_angular_boilerplate project.
-
 For more information on this file, see
 https://docs.djangoproject.com/en/1.7/topics/settings/
-
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.7/ref/settings/
 """
@@ -68,9 +66,17 @@ DATABASES = {
     )
 }
 """
+"""
 DATABASES = {
     'default': dj_database_url.config(
         default='postgres://postgres:612115303@localhost:5432/reknit_test')
+}
+"""
+
+
+DATABASES = {
+    'default': dj_database_url.config(
+        default='postgis://postgres:612115303@localhost:5432/reknit_test')
 }
 
 """
@@ -135,3 +141,5 @@ ALLOWED_HOSTS = ['*']
 
 # Overwrite user model
 AUTH_USER_MODEL = 'authentication.Account'
+
+#GEOS_LIBRARY_PATH = '/myvenv/Lib/site-packages/django/contrib/gis/geos/__pycache__/libgeos.cpython-34'
